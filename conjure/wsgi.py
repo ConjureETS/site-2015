@@ -8,7 +8,8 @@ https://docs.djangoproject.com/en/1.7/howto/deployment/wsgi/
 """
 
 import os
+from dj_static import Cling, MediaCling
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "conjure.settings")
 
 from django.core.wsgi import get_wsgi_application
-application = get_wsgi_application()
+application = Cling(MediaCling(get_wsgi_application()))

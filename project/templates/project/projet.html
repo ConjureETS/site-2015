@@ -1,0 +1,50 @@
+{% extends 'template.html' %}
+{% load staticfiles %}
+{% block content %}
+    <div class="projet">
+        <div class="col-lg-12">
+		    <h1>{{ project.name }}</h1>
+
+            {% if project.screenshot %}
+                <img class="img-responsive" src="{{ project.screenshot.url }}" alt="">
+			{% else %}
+                 <img class="img-responsive" src="http://placehold.it/1100x400" alt="">
+            {% endif %}
+
+            <div class="caption-full">
+                <h4>Descripiton  du projet:</h4>
+			  	<p>{{ project.description }}</p>
+					<a class="btn btn-large" href="{{ project.download }}">Download</a>
+				</div>
+		</div>
+	</div>
+	<section id="membre">
+		
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="">Équipe</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                {% for member in project.members.all %}
+                <div class="col-sm-4 list-item">
+                    <a href="{% url 'member:show' member.id %}" class="list-link" >
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"><h3>{{ member.first_name }} {{ member.last_name }}</h3></i>
+                            </div>
+                        </div>
+                        {% if member.photo %}
+                            <img src="{{ member.photo.url }}" class="avatar" alt="">
+                        {% else %}
+                            <img src="{% static 'img/profile.png' %}" class="avatar" alt="">
+                        {% endif %}
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

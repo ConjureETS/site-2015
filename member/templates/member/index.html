@@ -20,7 +20,7 @@
                                 </div>
                             </div>
                             {% if admin.photo %}
-                                <img src="{{ admin.photo }}" class="avatar" alt="">
+                                <img src="{{ admin.photo.url }}" class="avatar" alt="">
                             {% else %}
                                 <img src="{% static 'img/profile.png' %}" class="avatar" alt="">
                             {% endif %}
@@ -49,7 +49,7 @@
                                 </div>
                             </div>
                             {% if member.photo %}
-                                <img src="{{ member.photo }}" class="avatar" alt="">
+                                <img src="{{ member.photo.url }}" class="avatar" alt="">
                             {% else %}
                                 <img src="{% static 'img/profile.png' %}" class="avatar" alt="">
                             {% endif %}

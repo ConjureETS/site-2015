@@ -1,11 +1,62 @@
 {% extends 'template.html' %}
-
+{% load staticfiles %}
 {% block content %}
-
-    <ul>
-    {% for member in members %}
-        <li>{{ member.first_name }} {{ member.last_name }}</li>
-    {% endfor %}
-    </ul>
-
+    <section  id="membre">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="">Administration</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+			    {% for admin in admins %}	
+                    <div class="col-sm-4 list-item">
+					    <h3 class="text-center">{{ admin.position }}</h3>
+                        <a href="{% url 'member:show' admin.id %}" class="list-link">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <i class="fa fa-search-plus fa-3x"><h3>{{ admin.first_name }} {{ admin.last_name }}</h3></i>
+                                </div>
+                            </div>
+                            {% if admin.photo %}
+                                <img src="{{ admin.photo }}" class="avatar" alt="">
+                            {% else %}
+                                <img src="{% static 'img/profile.png' %}" class="avatar" alt="">
+                            {% endif %}
+                        </a>
+                    </div>
+				{% endfor %}
+            </div>
+        </div>
+    </section>
+	 <!-- list Grid Section -->
+    <section  id="membre">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="">Membres</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                {% for member in members %}
+                    <div class="col-sm-4 list-item">
+                        <a href="{% url 'member:show' member.id %}" class="list-link" >
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <i class="fa fa-search-plus fa-3x"><h3>{{ member.first_name }} {{ member.last_name }}</h3></i>
+                                </div>
+                            </div>
+                            {% if member.photo %}
+                                <img src="{{ member.photo }}" class="avatar" alt="">
+                            {% else %}
+                                <img src="{% static 'img/profile.png' %}" class="avatar" alt="">
+                            {% endif %}
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
 {% endblock %}

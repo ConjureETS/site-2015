@@ -3,10 +3,10 @@ from member.models import *
 
 
 def index(request):
-    #TODO : Order By...
-    members = Member.objects.all()
+    admins  = Member.objects.filter(is_admin=True)
+    members = Member.objects.filter(is_admin=False)
     
-    return render(request, 'member/index.html', {'members': members})
+    return render(request, 'member/index.html', {'admins': admins, 'members': members})
 
 
 def show(request, member_id):

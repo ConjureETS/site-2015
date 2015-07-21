@@ -10,6 +10,7 @@ urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),
     url(r'^membres/', include('member.urls', namespace='member')),
     url(r'^projets/', include('project.urls', namespace='project')),
+    url(r'^blog/', include('blog.urls', namespace='blog')),
     url(r'^admin/', include(admin.site.urls)),
     (r'^ckeditor/', include('ckeditor.urls')),
 )

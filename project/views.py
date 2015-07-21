@@ -11,4 +11,4 @@ def index(request):
 def show(request, project_id):
     project = Project.objects.get(pk=project_id)
 
-    return render(request, 'project/show.html', {'project': project})
+    return render(request, 'project/projet.html', {'project': project})

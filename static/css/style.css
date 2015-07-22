@@ -4,20 +4,37 @@ html {
 }
 body {
   margin-bottom: 0px;
-  padding-top:10px;
   padding-bottom: 0px;
   color: #fff;
- background-color:#1A7AC5;
+  background-color:#1A7AC5;
   /*background: rgba(24,188,156,.9);*/
 }
+
+.navbar-wrapper {
+    height:52px;
+}
+
+.navbar-wrapper .container {
+    width:100%;
+}
+
+.navbar-wrapper .navbar-brand {
+    padding:5px 10px;
+}
+
+.navbar-wrapper .navbar-brand img {
+    height:40px;
+}
+/*
 #conjure
 {
 	background-image: url("../img/conjure_logo.png");
-	width:200px;
-	height:50px;
+	width:228.3px;
+    height:52px;
     background-size: 200px 25px;
     background-repeat: no-repeat;
 }
+*/
 #projet
 {
 	background-color:#1A7AC5;

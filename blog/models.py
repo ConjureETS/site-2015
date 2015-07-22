@@ -6,3 +6,4 @@ class Article(models.Model):
     text = models.TextField()
     author = models.CharField(max_length=20)
     photo = models.ImageField(upload_to='article_photos')
+    created_at = models.DateField(auto_now_add=True)

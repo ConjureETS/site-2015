@@ -1,3 +1,10 @@
 /venv
 
 /.idea
+
+*.pyc
+*/*.pyc
+
+db.sqlite3
+
+/medias/*/*

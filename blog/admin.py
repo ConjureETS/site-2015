@@ -6,4 +6,4 @@ from blog import models, forms
 class ArticleAdmin(admin.ModelAdmin):
     form = forms.ArticleAdminForm
     fields = ['title', 'author', 'text', 'photo']
-    list_display = ['title', 'author']
+    list_display = ['title', 'author', 'created_at']

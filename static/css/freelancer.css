@@ -16,14 +16,14 @@ p.small {
     font-size: 16px;
 }
 
-/*a,
+a,
 a:hover,
 a:focus,
 a:active,
 a.active {
     outline: 0;
     color: #18bc9c;
-}*/
+}
 
 h1,
 h2,
@@ -163,7 +163,7 @@ section.success a.active {
     margin: 0 0 15px;
 }
 
- #projet .list-item .list-link {
+ .list-item .list-link {
     display: block;
     position: relative;
     margin: 0 auto;

@@ -1,4 +1,5 @@
 from django import forms
+from project import models
 from member import models as member_models
 
 
@@ -9,4 +10,7 @@ class MemberMultipleChoiceField(forms.ModelMultipleChoiceField):
 
 
 class ProjectAdminForm(forms.ModelForm):
-    members = MemberMultipleChoiceField(queryset=member_models.Member.objects.all())
+    members = MemberMultipleChoiceField(queryset=member_models.Member.objects.all(), required=False)
+    class Meta:
+        model = models.Project
+        fields = ['name', 'description', 'download', 'screenshot', 'members']

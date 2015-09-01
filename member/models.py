@@ -7,4 +7,4 @@ class Member(models.Model):
     email = models.CharField(max_length=50)
     photo = models.ImageField(upload_to="members", blank=True, null=True)
     is_admin = models.BooleanField(default=False)
-    position = models.CharField(max_length=50)
+    position = models.CharField(max_length=50, blank=True, null=True)

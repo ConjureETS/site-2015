@@ -1,3 +1,9 @@
+p,a
+{
+	font-family: 'Ubuntu', serif;
+	font-size:15px;
+	font-weight:bold;
+}
 html {
   position: relative;
   min-height: 100%;
@@ -11,9 +17,9 @@ body {
 }
 h1,h2,h3,h4,h5,h6,h7,h8,h9,h1
 {
-	color:fff;
-	    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family: 'Ubuntu', serif;
+	color:white;
+	text-transform: uppercase;
     font-weight: 700;
 }
 hr.star-light,
@@ -182,61 +188,69 @@ footer {
 .infobox
 {
 	padding:15px;
-	height:350px;
+	height:40%;
 	-webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,1);
 	-moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,1);
 	box-shadow: 0px 1px 5px 0px rgba(0,0,0,1);
+	font-family: 'Ubuntu', serif;
+	font-size:15px;
+	font-weight:bold;
 }
-.infobox p
+.boxContent
 {
-	text-align:middle;
 	padding-left:25%;
 	padding-right:25%;
+}
+#jams  li
+{
+	display:inline;
+	padding:20px;
 }
 #mtlgamejam
 {
 	background-color:#f8f8f8;
+	color:black;
 }
-
+#mtlgamejam h1
+{
+	color:black;
+}
+#mtlgamejam button 
+{
+	float:right;
+}
 #jams
 {
-	
+	color:white;
 }
 
 #contact
 {
 	background-color:#f8f8f8;
-	height:100px;
+	max-height:100px;
+	min-height:100px;
+	color:black;
+}
+#contact .boxContent
+{
+	margin:0px;
+}
+#contact  ul  
+{
+	float:right;
+	display:inline;
+}
+#contact  li  
+{
+	
+	display:inline;
+	padding:5px;
 }
 #conjure
 {
-	display:block;
+	color:white;
 }
-#jams img 
-{
-	float:right;
-	height:300px;
-	width:300px;
-	-webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-	-webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,1);
-	-moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,1);
-	box-shadow: 0px 1px 5px 0px rgba(0,0,0,1);
-}
-#conjure img 
-{
-	float:right;
-	height:300px;
-	width:300px;
-	-webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-	-webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,1);
-	-moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,1);
-	box-shadow: 0px 1px 5px 0px rgba(0,0,0,1);
-}
-#mtlgamejam img 
+.sectionImage  
 {
 	float:left;
 	height:300px;
@@ -247,6 +261,11 @@ footer {
 	-webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,1);
 	-moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,1);
 	box-shadow: 0px 1px 5px 0px rgba(0,0,0,1);
+}
+.imgJams  
+{
+	height:20%;
+	width:40%;
 }
 @media(min-width:767px) {
     #projet .list-item {

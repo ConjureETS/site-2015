@@ -2,6 +2,7 @@
 {% load staticfiles %}
 {% block content %}
 	 <!-- projet Grid Section -->
+	 
     <section  id="projet">
         <div class="container">
             <div class="row">
@@ -20,14 +21,15 @@
                             </div>
                         </div>
                         {% if project.screenshot %}
-                            <img src="{{ project.screenshot.url }}" class="img-responsive" alt="">
+                            <img src="{{ project.screenshot.url }}" class="projet" alt="">
                         {% else %}
-                            <img src="{% static 'img/projet/cabin.png' %}" class="img-responsive" alt="">
+                            <img src="{% static 'img/projet/cabin.png' %}" class="projet" alt="">
                         {% endif %}
                     </a>
                 </div>
                 {% endfor %}
             </div>
         </div>
+		</div>
     </section>
 {% endblock %}

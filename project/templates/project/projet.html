@@ -1,6 +1,7 @@
 {% extends 'template.html' %}
 {% load staticfiles %}
 {% block content %}
+<div class="boxContent">
     <div class="projet">
         <div class="col-lg-12">
 		    <h1>{{ project.name }}</h1>
@@ -46,5 +47,6 @@
                 {% endfor %}
             </div>
         </div>
+		</div>
     </section>
 {% endblock %}

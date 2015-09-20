@@ -1,6 +1,7 @@
 {% extends 'template.html' %}
 {% load staticfiles %}
 {% block content %}
+<div class="boxContent">
 <section id="cd-timeline" class="cd-container">
 	{%for article in articles%}
 	<div class="cd-timeline-block">
@@ -19,4 +20,5 @@
 		</div> <!-- cd-timeline-block -->
 	{%endfor%}
 </section>
+</div>
 {% endblock %}

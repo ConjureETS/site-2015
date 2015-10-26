@@ -2,7 +2,6 @@
 {% load staticfiles %}
 {% block content %}
 	 <!-- projet Grid Section -->
-	 
     <section  id="projet">
         <div class="container">
             <div class="row">
@@ -14,16 +13,16 @@
             <div class="row">
                 {% for project in projects %}
                 <div class="col-sm-4 list-item">
-                    <a href="{% url 'project:show' project.id %}" class="list-link">
+                    <a href="{% url 'project:show' project.id %}" class="list-link projet bordered">
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"><h3>{{ project.name }}</h3></i>
                             </div>
                         </div>
                         {% if project.screenshot %}
-                            <img src="{{ project.screenshot.url }}" class="projet" alt="">
+                            <img src="{{ project.screenshot.url }}" alt=""/>
                         {% else %}
-                            <img src="{% static 'img/projet/cabin.png' %}" class="projet" alt="">
+                            <img src="{% static 'img/projet/cabin.png' %}" alt=""/>
                         {% endif %}
                     </a>
                 </div>

@@ -12,10 +12,10 @@
             </div>
             <div class="row">
 			    {% for admin in admins %}	
-                    <div class="col-sm-4 list-item">
+                    <div class="col-sm-4 list-item membre">
 					    <h3 class="text-center">{{ admin.position }}</h3>
-                        <a href="{% url 'member:show' admin.id %}" class="list-link">
-                            <div class="caption">
+                        <a data-toggle="modal" href="{% url 'member:show' admin.id %}" data-target="#myModal"  class="list-link membre">
+                            <div class="caption membre bordered">
                                 <div class="caption-content">
                                     <i class="fa fa-search-plus fa-3x"><h3>{{ admin.first_name }} {{ admin.last_name }}</h3></i>
                                 </div>
@@ -27,6 +27,7 @@
                             {% endif %}
                         </a>
                     </div>
+
 				{% endfor %}
             </div>
         </div>
@@ -43,21 +44,38 @@
             <div class="row">
                 {% for member in members %}
                     <div class="col-sm-4 list-item">
-                        <a href="{% url 'member:show' member.id %}" class="list-link" >
-                            <div class="caption">
+					<a data-toggle="modal" href="{% url 'member:show' member.id %}" data-target="#myModal" class="list-link membre">
+                       
+                            <div class="caption membre bordered">
                                 <div class="caption-content">
                                     <i class="fa fa-search-plus fa-3x"><h3>{{ member.first_name }} {{ member.last_name }}</h3></i>
                                 </div>
                             </div>
                             {% if member.photo %}
-                                <img src="{{ member.photo.url }}" class="avatar" alt="">
+                                <img src="{{ admin.photo.url }}" class="avatar" alt="">
                             {% else %}
                                 <img src="{% static 'img/profile.png' %}" class="avatar" alt="">
                             {% endif %}
-                        </a>
+                    </a>
                     </div>
+					
                 {% endfor %}
             </div>
         </div>
     </section>
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                 <h4 class="modal-title">Modal title</h4>
+
+            </div>
+            <div class="modal-body"><div class="te"></div></div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
 {% endblock %}

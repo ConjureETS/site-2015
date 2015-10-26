@@ -1,7 +1,31 @@
-{% extends 'template.html' %}
-
 {% block content %}
-
-    <h1>{{ member.first_name }} {{ member.last_name }}</h1>
-    
+{% load staticfiles %}
+<div id="modalWindow">
+			
+                
+				<h3 class="modal-title">{{ member.first_name }} {{ member.last_name }}</h3>
+                  <table class="table table-user-information">
+                       <tr>
+						<td rowspan=3>
+						
+							{% if member.photo %}
+                                <img src="{{ admin.photo.url }}" class="avatar" alt="">
+                            {% else %}
+                                <img src="{% static 'img/profile.png' %}" class="avatar" alt="">
+                            {% endif %}
+						</td>
+						</tr>
+					  {% if member.is_admin %}
+						<tr>
+                            <td><p>Position :</p></td>
+							<td><p>{{ member.position}}</p></td>
+						</tr>
+                            {% endif %}
+                      
+					  <tr>
+                        <td><p>Email :</p></td>
+                        <td><a href="mailto:info@support.com">{{ member.email}}</a></td>
+                      </tr>
+                  </table>
+<div>
 {% endblock %}

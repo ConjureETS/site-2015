@@ -1,24 +1,25 @@
 {% extends 'template.html' %}
 {% load staticfiles %}
-
-
 {% block content %}
-<div class="content">
+<div class="content" id="pageAcceuil">
 <div class="infobox" id="conjure">
-<img class="sectionImage" src={% static 'img/conjureMiniLogo.png' %}>
+<img class="sectionImage left" src={% static 'img/conjureMiniLogo.png' %}>
 <div class="boxContent">
 <h1>Le Club</h1>
 <p>
-Conjure est le club de développement de jeux vidéo de l’École des Technologie Supérieure. Nos membres ont comme projet le développement d’un jeu qu’ils ont choisi ou qu’ils veulent réalisé dans une équipe de gens avec la même motivation en utilisant des outils présentement utilisé dans l’industrie.Ils participent aussi à plusieurs évenements reliés à l’industrie du jeu vidéo telle que des compétitions et des conférences. Conjure est d’ailleurs le fondateur de l’un de ces évènements, le Montréal Game Jam, qui est une compétition de développement de jeux vidéo en 48h. Venez rejoindre notre équipe de gens motivé et passioné pour vivre votre passion de création de jeux vidéo..
-Objectifs.Encadrer le développement des jeux vidéo réalisés par les étudiants de l’École de technologie supérieure.
-Favoriser la croissance du talent créatif et des compétences techniques de la relève de l’industrie par la formation des étudiants.
-Faire la promotion de la culture et de l’industrie du jeu au Québec à travers nos activités.</p>
+Conjure est le club de développement de jeux vidéo de l’École des Technologie Supérieure.
+Nos membres ont comme projet le développement d’un jeu de leur choix.Les outils utilisée sont les outils utilisée dans l'industrie du jeu.
+Ils participent aussi à plusieurs évenements reliés à l’industrie du jeu vidéo telle que des compétitions et des conférences. 
+Conjure est d’ailleurs le fondateur de l’un de ces évènements, le Montréal Game Jam, qui est une compétition de développement de jeux vidéo en 48h.
+Venez rejoindre notre équipe de gens motivé et passioné pour vivre votre passion de création de jeux vidéo.
+</p>
 </div>
 </div>
 <div class="infobox" id="mtlgamejam">
-<img class="sectionImage" src={% static 'img/MTLGJ_logo.png' %}>
+<img class="sectionImage right" src={% static 'img/MTLGJ_logo.png' %}>
 <div class="boxContent">
 <h1>Le Montreal Game Jam</h1>
+<p>
 Le Montreal Game Jam est le chapitre Montréalais pour le Global Game Jam.
 Cet événement international donne comme défi aux participants de réaliser un 
 prototype de jeu basé sur une thématique spécifique pendant une période de 48 heures.
@@ -51,14 +52,14 @@ Voici quelque Game Jam auquel Conjure participe:
 </div>
 </div>
 <div class="infobox" id="contact">
-<p><ul class="right"><li>local A-1744</li>
-<li>Conjure@ens.etsmtl.ca</li>
-<li>(514) 396-8800 poste: #7713</li>
+<ul class="left"><li><p>local A-1744</p></li>
+<li><a href="mailto:Conjure@ens.etsmtl.ca">Conjure@ens.etsmtl.ca</a></li>
+<li><p>(514) 396-8800 poste: #7713</p></li>
 </ul>
-<ul class="left">
+<ul class="right">
 <li><a href="https://www.facebook.com/ConjureETS"><img src={% static 'img/fblogo.png' %} class="logo"/>ConjureETS</a></li>
 <li><a href="https://www.youtube.com/user/ConjureETS"><img src={% static 'img/ytlogo.png' %} class="logo"/>Youtube</a></li>
-</ul></p>
+</ul>
 </div>
 </div>
 {% endblock %}

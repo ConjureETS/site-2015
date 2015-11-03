@@ -1,7 +1,24 @@
 {% extends 'template.html' %}
-
+{% load staticfiles %}
 {% block content %}
-<section>
-    <h1>blog</h1>
+<div class="boxContent">
+<section id="cd-timeline" class="cd-container">
+	{%for article in articles%}
+	<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-picture">
+			</div> <!-- cd-timeline-img -->
+			<div class="cd-timeline-content">
+				<h2>{{article.title}}</h2>
+					{% if article.photo %}
+                                <img src="{{ article.photo.url }}" alt="">
+                            {% else %}
+                                <img src="{% static 'img/profile.png' %}" alt="">
+                            {% endif %}
+				<p>{{ article.text|safe|truncatewords:50 }}</p>
+				<a href="#0" class="cd-read-more">En savoir plus</a>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+	{%endfor%}
 </section>
+</div>
 {% endblock %}

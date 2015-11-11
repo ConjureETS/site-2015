@@ -1,7 +1,7 @@
 {% extends 'template.html' %}
 {% load staticfiles %}
 {% block content %}
-	<section id="projet">
+	<section class="success" id="projet">
 		<div class="boxContent">
 		    <h1>{{ project.name }}</h1>
 
@@ -15,10 +15,11 @@
                 <h4>Descripiton  du projet:</h4>
 					<p id = "descriptionProjet">{{ project.description }}</p>
 	
-					<a class="btn btn-primary right" href="{{ project.download }}" download>Download</a>
+					<a class="btn btn-outline-inverted right" href="{{ project.download }}" download>
+					 <i class="fa fa-download"></i> Download</a>
 				</div>
 	</section>
-	<section id="membre">
+	<section  class ="success" id="membre">
 		
         <div class="boxContent">
             <div class="row">

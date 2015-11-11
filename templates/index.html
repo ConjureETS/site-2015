@@ -1,65 +1,96 @@
 {% extends 'template.html' %}
 {% load staticfiles %}
 {% block content %}
-<div class="content" id="pageAcceuil">
-<div class="infobox" id="conjure">
-<img class="sectionImage left" src={% static 'img/conjureMiniLogo.png' %}>
-<div class="boxContent">
-<h1>Le Club</h1>
-<p>
-Conjure est le club de développement de jeux vidéo de l’École des Technologie Supérieure.
+<!-- Club Section -->
+    <section id="club" class="success">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Le Club</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+			    <div class="row">
+				<div class=" hidden-xs col-lg-4">
+					<img class="img-responsive sectionImage" src="{% static 'img/conjureMiniLogo.png' %}" alt="">
+                </div>
+                <div class="col-lg-4">
+                    <p>Conjure est le club de développement de jeux vidéo de l’École des Technologie Supérieure.
 Nos membres ont comme projet le développement d’un jeu de leur choix.Les outils utilisée sont les outils utilisée dans l'industrie du jeu.
-Ils participent aussi à plusieurs évenements reliés à l’industrie du jeu vidéo telle que des compétitions et des conférences. 
+Ils participent aussi à plusieurs évenements reliés à l’industrie du jeu vidéo telle que des compétitions et des conférences.</p></div>
+                <div class="col-lg-4">
+                    <p>
 Conjure est d’ailleurs le fondateur de l’un de ces évènements, le Montréal Game Jam, qui est une compétition de développement de jeux vidéo en 48h.
-Venez rejoindre notre équipe de gens motivé et passioné pour vivre votre passion de création de jeux vidéo.
-</p>
-</div>
-</div>
-<div class="infobox" id="mtlgamejam">
-<img class="sectionImage right" src={% static 'img/MTLGJ_logo.png' %}>
-<div class="boxContent">
-<h1>Le Montreal Game Jam</h1>
-<p>
-Le Montreal Game Jam est le chapitre Montréalais pour le Global Game Jam.
+Venez rejoindre notre équipe de gens motivé et passioné pour vivre votre passion de création de jeux vidéo.</p>
+                </div>
+            </div>
+            
+    </section>
+
+    <!-- Montreal Game Jam Section -->
+    <section id="mtlgamejam">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Le Montreal Game Jam</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+			
+                <div class="col-lg-4">
+                    <p>Le Montreal Game Jam est le chapitre Montréalais pour le Global Game Jam.
 Cet événement international donne comme défi aux participants de réaliser un 
 prototype de jeu basé sur une thématique spécifique pendant une période de 48 heures.
-Plus de 10 684 participants dans 47 pays ont accepté le défi en 2012 et plus de 2209 jeux ont étés réalisés lors de l’événement.
+.</p></div>
+                <div class="col-lg-4">
+                    <p>Plus de 10 684 participants dans 47 pays ont accepté le défi en 2012 et plus de 2209 jeux ont étés réalisés lors de l’événement.
 L’organisation du Montreal Game Jam est constitué de l’union de multiples universités et professionnels de Montréal
-dont le mandat commun est de promouvoir l’industrie du jeu vidéo.
- </p>
- <button><a href="http://mtlgamejam.org/">En savoir plus</a></button>
-</div>
-</div>
-<div class="infobox" id="jams">
-<div class="boxContent"><h1>Autre Jams</h1>
-<p>
-Voici quelque Game Jam auquel Conjure participe:
-<ul>
-	<li>
-		<img src={% static 'img/jams/ggjlogo.png' %} class="imgJams">
-	</li>
-	<li>
-		<img src={% static 'img/jams/pixelChalenge.png' %} class="imgJams">
-	</li>
-	<li>
-	<img src={% static 'img/jams/gameJamBattle.png' %} class="imgJams">
-	</li>
-	<li>
-	<img src={% static 'img/jams/OJamLogo.png' %} class="imgJams">
-	</li>
-</ul>
-</p>
-</div>
-</div>
-<div class="infobox" id="contact">
-<ul class="left"><li><p>local A-1744</p></li>
-<li><a href="mailto:Conjure@ens.etsmtl.ca">Conjure@ens.etsmtl.ca</a></li>
-<li><p>(514) 396-8800 poste: #7713</p></li>
-</ul>
-<ul class="right">
-<li><a href="https://www.facebook.com/ConjureETS"><img src={% static 'img/fblogo.png' %} class="logo"/>ConjureETS</a></li>
-<li><a href="https://www.youtube.com/user/ConjureETS"><img src={% static 'img/ytlogo.png' %} class="logo"/>Youtube</a></li>
-</ul>
-</div>
-</div>
+dont le mandat commun est de promouvoir l’industrie du jeu vidéo</p>
+                </div>
+				<div class=" hidden-xs col-lg-4">
+					<img class="img-responsive sectionImage" src="{% static 'img/MTLGJ_logo.png' %}" alt="">
+                </div>
+
+                <div class="col-lg-12 col-lg-offset-2 text-center">
+                    <a href="#" class="btn btn-lg btn-outline">
+                        En savoir plus
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="jams" class="success">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Les autres Jams</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+			 <div class="row text-center">
+                <div class="col-lg-3  col-md-4 list-item">
+                    <img src="{% static 'img/jams/ggjlogo.png' %}" class="hidden-xs img-responsive" alt="">
+					<p class="visible-xs">Global Game Jam</p>
+                </div>
+				<div class="col-lg-3 col-md-4 list-item">
+                    <img src="{% static 'img/jams/pixelChalenge.png' %}" class="hidden-xs img-responsive" alt="">
+					<p class="visible-xs">Pixel Chalenge</p>
+                </div>
+				<div class="col-lg-3 col-md-4 list-item">
+                    <img src="{% static 'img/jams/GameJamBattle.png' %}" class="hidden-xs img-responsive" alt="">
+					<p class="visible-xs">Game Jam Battle</p>
+                </div>
+				
+				<div class="col-lg-3 col-md-4 list-item">
+                    <img src="{% static 'img/jams/OjamLogo.png' %}" class="hidden-xs img-responsive" alt="">
+					<p class="visible-xs">O Jam</p>
+                </div>
+		</div>
+			
+		</div>
+    </section>
+
 {% endblock %}

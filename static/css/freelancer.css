@@ -229,7 +229,7 @@ section.success a.active {
         padding-top: 75px;
     }
 }
-/*#jams .portfolio-item {
+#jams .portfolio-item {
     right: 0;
     margin: 0 0 15px;
 	width: 40%;
@@ -276,7 +276,7 @@ section.success a.active {
 #jams .portfolio-item .portfolio-link .caption .caption-content h3,
 #jams .portfolio-item .portfolio-link .caption .caption-content h4 {
     margin: 0;
-}*/
+}
 
 #jams * {
     z-index: 2;
@@ -286,6 +286,20 @@ section.success a.active {
     #portfolio .portfolio-item {
         margin: 0 0 30px;
     }
+}
+
+.imageJams 
+{
+	padding:10px;
+	height:200px;
+	width:200px;
+}
+
+.gameJamBattle 
+{
+	margin:0 auto;
+	height:200px;
+	width:200px;
 }
 
 .btn-outline {

@@ -176,7 +176,7 @@ a:hover {
 .navbar-fixed-top .navbar-brand {
 	padding:1%;
 }
-.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus  {
     color: #1A7AC5;
     background-color: transparent;
 }

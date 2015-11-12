@@ -2,7 +2,7 @@
 {% load staticfiles %}
 {% block content %}
 <!-- Club Section -->
-    <section id="club" class="success">
+<section id="club" class="success">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -70,6 +70,9 @@ dont le mandat commun est de promouvoir l’industrie du jeu vidéo</p>
                     <hr class="star-light">
                 </div>
             </div>
+						<br/>
+			<br/>			<br/>
+			<br/>
 			 <div class="row">
                 <div class="col-sm-3">
                     <img src="{% static 'img/jams/globalgamejam.PNG' %}" class="hidden-xs img-responsive imgJams"  alt="">
@@ -97,8 +100,62 @@ dont le mandat commun est de promouvoir l’industrie du jeu vidéo</p>
 					<p class="visible-xs">Asylum Jam</p>
                 </div>
 		</div>
-			
+
 		</div>
+    </section>
+	    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Nous Rejoindre</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+                    <form name="sentMessage" id="contactForm" novalidate>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Nom</label>
+                                <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Veuillez fournir un nom.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Adresse couriel</label>
+                                <input type="email" class="form-control" placeholder="Adresse couriel" id="email" required data-validation-required-message="Veuillez fournir une adresse couriel">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <!--div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Numero de telephone</label>
+                                <input type="tel" class="form-control" placeholder="Numero de telephone" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div-->
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Message</label>
+                                <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Veuillez entrer un message."></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <br>
+                        <div id="success"></div>
+                        <div class="row">
+                            <div class="form-group col-xs-12">
+                                <button type="submit" class="btn btn-outline btn-lg">Send</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
 
 {% endblock %}

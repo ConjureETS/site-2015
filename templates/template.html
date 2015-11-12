@@ -14,28 +14,26 @@
     <!-- Bootstrap core CSS -->
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="{% static 'css/style.css' %}" rel="stylesheet"-->
+    <!--link href="{% static 'css/style.css' %}" rel="stylesheet"-->
 	<link href="{% static 'css/freelancer.css' %}" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-	<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
   </head>
-
-  <body id="page-top">
+  <body id="page-top" class="index">
         <!-- Navigation -->
 		<nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand"  href="{% url 'index' %}"> <img class="logo"/></a>
+                <a class="navbar-brand"  href="#page-top"> <img class="logo"/></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -45,7 +43,8 @@
                         <a href="#page-top"></a>
                     </li>
                   <ul class="nav navbar-nav">
-                <li><a href="{% url 'index' %}">Accueil</a></li>
+                <!--li><a href="{% url 'index' %}">Accueil</a></li-->
+				<li><a href="#page-top">acceuil</a></li>
 				<li><a href="#club">Club</a></li>
 				<li><a href="#mtlgj">MTLGJ</a></li>
 				<li><a href="#jams">Jams</a></li>
@@ -112,22 +111,22 @@
     <!-- Portfolio Modals -->
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="{% static 'js/jquery.js' %}"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
 
     <!-- Plugin JavaScript -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/cbpAnimatedHeader.js"></script>
+    <script src="{% static 'js/classie.js' %}"></script>
+    <script src="{% static 'js/cbpAnimatedHeader.js' %}"></script>
 
     <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+    <script src="{% static 'js/jqBootstrapValidation.js' %}"></script>
+    <script src="{% static 'js/contact_me.js' %}"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="js/freelancer.js"></script>
+    <script src="{% static 'js/freelancer.js' %}"></script>
 
 </body>
 
